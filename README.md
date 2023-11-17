@@ -4,6 +4,9 @@ This is a [FluentCRM](https://wpfusion.com/go/fluentcrm) module which adds an ac
 
 It's designed to make FluentCRM compatible with WP Fusion's [Event Tracking Addon](https://wpfusion.com/documentation/event-tracking/event-tracking-overview/).
 
+![image](https://github.com/verygoodplugins/fluent-crm-events/assets/13076544/678ba9c7-ee5f-4e20-af49-10d55289f429)
+
+
 ## Creating events
 
 Events can be created via PHP or via the REST API.
@@ -74,7 +77,7 @@ Events can be POSTed to `/wp-json/fluent-crm/v2/events`. The body should be a JS
 
 1. Download the [latest tagged release](https://github.com/verygoodplugins/fluent-crm-events/tags).
 
-2. Navigate to Plugins >> Add New in the WordPress admin and upload the file.
+2. Navigate to Plugins » Add New in the WordPress admin and upload the file.
 
 3. Activate the plugin.
 
