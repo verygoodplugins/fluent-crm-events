@@ -64,6 +64,9 @@ Events can be POSTed to `/wp-json/fluent-crm/v2/events`. The body should be a JS
 
 ## Changelog
 
+### 1.0.1 on December 13th, 2023
+- Tracked events will now fire a `fluent_crm/track_activity_by_subscriber` action so that the subscriber's Last Activity is updated
+
 ### 1.0.0 on November 17th, 2023
 
 - Initial release

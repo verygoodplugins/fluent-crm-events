@@ -4,7 +4,7 @@
  * Plugin Name: FluentCRM - Events
  * Description: Adds Events (or Activities) support to FluentCRM.
  * Plugin URI: https://github.com/verygoodplugins/fluent-crm-events/
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Very Good Plugins
  * Author URI: https://verygoodplugins.com/
 */
@@ -34,7 +34,7 @@ if ( ! function_exists( 'add_action' ) ) {
 	exit();
 }
 
-define( 'FCRM_EVENTS_VERSION', '1.0.0' );
+define( 'FCRM_EVENTS_VERSION', '1.0.1' );
 
 /**
  * Adds an event to the table.
@@ -84,6 +84,8 @@ function fcrm_events_add_event( $subscriber_id, $event_type, $event_title, $even
 	);
 
 	$result = $wpdb->insert( "{$wpdb->prefix}fc_events", $insert, $format );
+
+	do_action( 'fluent_crm/track_activity_by_subscriber', $subscriber_id );
 
 	return $result;
 
@@ -281,7 +283,7 @@ function fcrm_events_create_update_table() {
 
 	}
 
-	update_option( 'fcrm_events_table_version', FCRM_EVENTS_VERSION, false );
+	update_option( 'fcrm_events_table_version', FCRM_EVENTS_VERSION );
 
 }
 
